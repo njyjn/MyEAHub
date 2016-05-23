@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:layout_weight="1">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dp"
+        android:id="@+id/location1"
+        android:stretchColumns="*"
+        android:layout_gravity="center_horizontal|top"
+        android:isScrollContainer="true"
+        android:background="#99FFFFFF">
+
+        <TableRow
+            android:id="@+id/tableRow0"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="0dp"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:id="@+id/connect_status"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#FF0000"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:text="Sensor C7C9"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:visibility="invisible"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Temp"
+                android:id="@+id/temperature"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Humidity"
+                android:textAlignment="center"
+                android:id="@+id/humidity"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Dust"
+                android:id="@+id/dust"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/TemperatureView"
+                android:textSize="30sp"
+                android:text="--"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/HumidityView"
+                android:textSize="30sp"
+                android:text="--"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/DustView"
+                android:textSize="30sp"
+                android:text="--"
+                android:gravity="center" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/degrees"
+                android:textSize="15sp"
+                android:text="ºC"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/percent"
+                android:textSize="15sp"
+                android:text="%"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/dustUnits"
+                android:textSize="15sp"
+                android:text="mg m-3"
+                android:gravity="center" />
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:layout_marginTop="5dp"
+            android:background="#000000" />
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/temperature_mean"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Temperature Mean:"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/temperature_mean_value"
+                android:textSize="15sp"
+                android:text="--"
+                android:gravity="right" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/temperature_variance"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Temperature Variance:"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/temperature_variance_value"
+                android:textSize="15sp"
+                android:text="--"
+                android:gravity="right" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/humidity_mean"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Humidity Mean:"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/humidity_mean_value"
+                android:textSize="15sp"
+                android:text="--"
+                android:gravity="right" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/humidity_variance"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Humidity Variance:"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/humidity_variance_value"
+                android:textSize="15sp"
+                android:text="--"
+                android:gravity="right" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/dust_mean"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Dust Mean:"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/dust_mean_value"
+                android:textSize="15sp"
+                android:text="--"
+                android:gravity="right" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/dust_variance"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Dust Variance:"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/dust_variance_value"
+                android:textSize="15sp"
+                android:text="--"
+                android:gravity="right" />
+
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>
